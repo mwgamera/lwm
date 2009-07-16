@@ -1,0 +1,2 @@
+?package(lwm):needs="wm" section="Window Managers"\
+  title="lwm" command="/usr/bin/lwm"

@@ -1,0 +1,20 @@
+This package was debianised by Matthew Wilcox <willy@debian.org> on
+Tue, 04 Nov 2003, based on an earlier debianisation by William Ono
+<wmono@debian.org>.
+
+It was downloaded from http://www.jfc.org.uk/software/lwm.html and
+the tarball location is http://www.jfc.org.uk/files/lwm/lwm-1.2.1.tar.gz
+
+Upstream Authors:
+  enh     Elliott Hughes  ehughes@bluearc.com
+  jfc     James Carter    james@jfc.org.uk
+
+Copyright (C) 1997-2003 Elliott Hughes, James Carter
+
+This software is supplied under the terms of the GNU General Public
+License version 2 or later. The full text of the license can be found
+at:
+
+	http://www.gnu.org/copyleft/gpl.html
+
+On Debian/GNU systems, this can be found as /usr/share/common-licenses/GPL .

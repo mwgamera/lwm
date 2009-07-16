@@ -21,7 +21,7 @@
 
 #define DEFAULT_TITLE_FONT "-*-lucida-bold-r-normal-sans-14-*-*-*-p-*-iso10646-1"
 #define DEFAULT_POPUP_FONT "-*-lucida-medium-r-normal-sans-12-*-*-*-p-*-iso10646-1"
-#define DEFAULT_TERMINAL "xterm"
+#define DEFAULT_TERMINAL "x-terminal-emulator"
 #define DEFAULT_BORDER 6
 
 #define HIDE_BUTTON Button3

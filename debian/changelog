@@ -1,0 +1,116 @@
+lwm (1.2.1-1.2) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Build-depend on xutils-dev instead of xutils for xmkmf (Closes: #485209).
+  * Build-depend on x11proto-core-dev instead of x-dev (Closes: #515382).
+  * debian/rules: Use $(MAKE) distclean instead of $(MAKE) clean, do not
+    ignore errors.
+  * Set debhelper compat version to 5.
+  * Install man page as "lwm.1.gz".
+  * Mention copyright holder and years of copyright in debian/copyright.
+  * debian/control: Add Homepage field.
+  * debian/control: Bump Standards-Version to 3.8.2.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Thu, 16 Jul 2009 21:19:15 +0200
+
+lwm (1.2.1-1.1) unstable; urgency=low
+
+  * Non-maintainer upload to fix Failure To Build From Source.
+  * Remove extra Depends line.  Thanks to Barry deFreese for the patch.
+    Closes: 464296
+  * debian/menu:
+    + Updated section from "WindowManagers" to "Window Managers"
+    + Updated command from "/usr/bin/X11/lwm" to "/usr/bin/lwm"
+    + Quoted all strings
+
+ -- Margarita Manterola <marga@debian.org>  Wed, 27 Feb 2008 18:13:52 +0000
+
+lwm (1.2.1-1) unstable; urgency=low
+
+  * New upstream release.  Closes: #279410
+  * Change build-dependency from xlibs-dev to the libs we actually depend on
+  * Reword manpage to clarify the button 3 menu.  Closes: #275836
+  * Move setlocale() call after XCreateFontSet().  Closes: #257251
+
+ -- Matthew Wilcox <willy@debian.org>  Sat, 26 Feb 2005 21:18:36 -0500
+
+lwm (1.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove lesstif-dev from build-depends since it's no longer needed.
+
+ -- Matthew Wilcox <willy@debian.org>  Tue, 09 Dec 2003 11:34:24 -0500
+
+lwm (1.1.5-1) unstable; urgency=low
+
+  * New maintainer.  Closes: #219063
+  * New upstream version.  Closes: #215194
+  * New upstream location.  Closes: #215193
+  * Repackage, based on William's work.
+    - Replace the manual page with upstream.
+    - Drop support for /usr/sbin/register-window-manager
+    - Bump priority to 80 (20 base + 20 for menu + 40 for EWMH).
+    - Use debhelper v4.
+    - Don't ship INSTALL -- we already did that bit for you.
+  * Standards-Version 3.6.1
+  * Somewhere, the patch to use x-terminal-emulator got lost.  Reinstate it.
+  * Depend on x-terminal-emulator, we do invoke it after all.
+
+ -- Matthew Wilcox <willy@debian.org>  Wed, 05 Nov 2003 12:33:41 -0500
+
+lwm (1.01-3) unstable; urgency=low
+
+  * Standards-Version: 3.5.6.1
+  * Changed ComplexProgramTarget to ComplexProgramTargetNoMan in Imakefile per
+    http://lists.debian.org/debian-devel/2002/debian-devel-200202/msg01206.html
+    (Closes: #141433)
+  * Removed invocation of dh_suidregister
+  * Now invokes dh_installwm per current policy
+
+ -- William Ono <wmono@debian.org>  Sun, 14 Apr 2002 20:44:26 -0700
+
+lwm (1.01-2) unstable; urgency=low
+
+  * Fixed Build-Depends to match woody's package names (Closes: #81188)
+    Specifically, xlib6g-dev was replaced by xutils and xlibs-dev
+
+ -- William Ono <wmono@debian.org>  Thu,  4 Jan 2001 04:44:30 -0800
+
+lwm (1.01-1) unstable; urgency=low
+
+  * New upstream version (Closes: #80171)
+  * Fixed lwm.1x so the section NAME is properly named (Closes: #80393)
+
+ -- William Ono <wmono@debian.org>  Wed, 27 Dec 2000 11:39:17 -0800
+
+lwm (1.00-4) unstable; urgency=low
+
+  * Set Build-Depends in debian/control
+
+ -- William Ono <wmono@debian.org>  Sun, 19 Mar 2000 20:00:48 -0800
+
+lwm (1.00-3) unstable; urgency=low
+
+  * Changed xterm dependence in lwm.h to x-terminal-emulator
+    (Closes: #52977)
+
+ -- William Ono <wmono@debian.org>  Tue, 21 Dec 1999 12:54:22 -0800
+
+lwm (1.00-2) unstable; urgency=low
+
+  * Now has hard-coded reference to x-terminal-emulator instead of xterm
+    (Related to #52977, does not close this bug)
+  * Registers as a window manager with register-window-manager
+    (Closes: #52978)
+
+ -- William Ono <wmono@debian.org>  Fri, 17 Dec 1999 17:38:59 -0800
+
+lwm (1.00-1) unstable; urgency=low
+
+  * Initial Release of Debian package.
+
+ -- William Ono <wmono@debian.org>  Fri, 22 Oct 1999 17:55:35 -0700
+
+Local variables:
+mode: debian-changelog
+End:

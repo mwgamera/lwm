@@ -1,0 +1,4 @@
+10-lwm.man.patch
+20-lwm.h-terminal.patch
+30-lwm.c-locale.patch
+30-lwm.c-locale=31-term.patch

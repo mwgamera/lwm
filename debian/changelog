@@ -8,12 +8,14 @@ lwm (1.2.1-2) unstable; urgency=low
     - (Depends): add ${misc:Depends}.
   * debian/copyright
     - Update layout.
+  * debian/rules
+    - Update to dh(1).
   * debian/source/format
     - New file.
   * debian/watch
     - New file.
 
- -- Jari Aalto <jari.aalto@cante.net>  Fri, 05 Mar 2010 11:04:01 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 05 Mar 2010 11:06:56 +0200
 
 lwm (1.2.1-1.2) unstable; urgency=low
 

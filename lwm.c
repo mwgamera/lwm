@@ -86,6 +86,8 @@ main(int argc, char *argv[]) {
 
 	mode = wm_initialising;
 
+	setlocale(LC_ALL,"");
+
 	/* Open a connection to the X server. */
 	dpy = XOpenDisplay(NULL);
 	if (dpy == 0)
@@ -164,8 +166,6 @@ main(int argc, char *argv[]) {
 		popup_font_set_ext = XExtentsOfFontSet(popup_font_set);
 	}
 	
-	setlocale(LC_ALL,"");
-
 	initScreens();
 	ewmh_init_screens();
 	session_init(argc, argv);
@@ -299,7 +299,7 @@ shell(ScreenInfo * screen, int button, int x, int y) {
 		execl(sh, sh, "-c", command, 0);
 		fprintf(stderr, "%s: can't exec \"%s -c %s\"\n", argv0, sh,
 			command);
-		execlp("x-terminal-emulator", "x-terminal-emulator", 0);
+		execlp("xterm", "xterm", 0);
 		exit(EXIT_FAILURE);
 	case -1:	/* Error. */
 		fprintf(stderr, "%s: couldn't fork\n", argv0);

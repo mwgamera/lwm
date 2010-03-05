@@ -9,6 +9,8 @@ lwm (1.2.1-2) unstable; urgency=low
       x-terminal-emulator.
   * debian/copyright
     - Update layout.
+  * debian/patches
+    - Convert inline changes to patches.
   * debian/rules
     - Update to dh(1).
   * debian/source/format
@@ -16,7 +18,7 @@ lwm (1.2.1-2) unstable; urgency=low
   * debian/watch
     - New file.
 
- -- Jari Aalto <jari.aalto@cante.net>  Fri, 05 Mar 2010 11:10:38 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 05 Mar 2010 11:29:52 +0200
 
 lwm (1.2.1-1.2) unstable; urgency=low
 

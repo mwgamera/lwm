@@ -1,0 +1,28 @@
+From 360cee6df1833b219c8cf5814fbe8da8dd70ecf8 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 5 Mar 2010 11:16:29 +0200
+Subject: [PATCH] my.10-lwm.man: Fix manual
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ lwm.man |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lwm.man b/lwm.man
+index 5a78d2e..99786b3 100644
+--- a/lwm.man
++++ b/lwm.man
+@@ -51,8 +51,8 @@ In the default configuration, button 2 on the root window brings up a
+ new shell.
+ .PP
+ A button 3 click on a window frame hides that window.  Pressing
+-button 3 on the root window brings up a menu. The various items unhide
+-the named hidden window.
++button 3 on the root window brings up a menu of all the hidden windows.
++Releasing the button while over an item will unhide the named window.
+ .PP
+ A button 3 click in the frame while Shift is held down pushes the window
+ to the back, under any other windows. (Users with 4-button mice are
+-- 
+1.7.0
+

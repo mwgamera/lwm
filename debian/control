@@ -1,16 +1,15 @@
 Source: lwm
-Build-Depends: debhelper (>= 5), xutils-dev, x11proto-core-dev, libsm-dev,
- libx11-dev, libxext-dev
+Build-Depends: debhelper (>= 7.1), xutils-dev, x11proto-core-dev, libsm-dev, libx11-dev, libxext-dev
 Section: x11
 Priority: optional
-Maintainer: Matthew Wilcox <willy@debian.org>
-Standards-Version: 3.8.2
+Maintainer: Jari Aalto <jari.aalto@cante.net>
+Standards-Version: 3.8.4
 Homepage: http://www.jfc.org.uk/software/lwm.html
 
 Package: lwm
 Architecture: any
 Provides: x-window-manager
-Depends: ${shlibs:Depends}, x-terminal-emulator
+Depends: ${shlibs:Depends}, ${misc:Depends}, x-terminal-emulator
 Description: Lightweight Window Manager
  lwm is a window manager for X that tries to keep out of your face.
  There are no icons, no button bars, no icon docks, no root menus,

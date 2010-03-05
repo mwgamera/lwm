@@ -1,0 +1,27 @@
+From 3957a8ef013a85498f2e705878a3c6a5bcefad11 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 5 Mar 2010 11:28:43 +0200
+Subject: [PATCH] lwm.c: Use Debian terminal setting
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ lwm.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/lwm.c b/lwm.c
+index 612131a..9b348b0 100644
+--- a/lwm.c
++++ b/lwm.c
+@@ -297,7 +297,7 @@ shell(ScreenInfo * screen, int button, int x, int y) {
+ 		execl(sh, sh, "-c", command, 0);
+ 		fprintf(stderr, "%s: can't exec \"%s -c %s\"\n", argv0, sh,
+ 			command);
+-		execlp("xterm", "xterm", 0);
++		execlp("x-terminal-emulator", "x-terminal-emulator", 0);
+ 		exit(EXIT_FAILURE);
+ 	case -1:	/* Error. */
+ 		fprintf(stderr, "%s: couldn't fork\n", argv0);
+-- 
+1.7.0
+

@@ -1,20 +1,45 @@
-This package was debianised by Matthew Wilcox <willy@debian.org> on
-Tue, 04 Nov 2003, based on an earlier debianisation by William Ono
-<wmono@debian.org>.
+This work was packaged for Debian by:
 
-It was downloaded from http://www.jfc.org.uk/software/lwm.html and
-the tarball location is http://www.jfc.org.uk/files/lwm/lwm-1.2.1.tar.gz
+    William Ono <wmono@debian.org>
+    on 1999-10-22 17:55:35-07 Fri.
+
+It was downloaded from:
+
+    http://www.jfc.org.uk/software/lwm.html
 
 Upstream Authors:
-  enh     Elliott Hughes  ehughes@bluearc.com
-  jfc     James Carter    james@jfc.org.uk
 
-Copyright (C) 1997-2003 Elliott Hughes, James Carter
+    Elliott Hughes (enh) <ehughes@bluearc.com
+    James Carter (jfc) james@jfc.org.uk
 
-This software is supplied under the terms of the GNU General Public
-License version 2 or later. The full text of the license can be found
-at:
+Copyright:
 
-	http://www.gnu.org/copyleft/gpl.html
+    Copyright (C) 1997-2003 Elliott Hughes
+    Copyright (C) 1997-2003 James Carter
 
-On Debian/GNU systems, this can be found as /usr/share/common-licenses/GPL .
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program. If not, see <http://www.gnu.org/licenses/>
+
+The Debian packaging is licensed under the GPL version 2, or (at your
+option), any later version, and is:
+
+    Copyright (C) 2010		Jari Aalto <jari.aalto@cante.net>
+    Copyright (C) 2009		Ansgar Burchardt <ansgar@43-1.org>
+    Copyright (C) 2008		Margarita Manterola <marga@debian.org>
+    Copyright (C) 2003-2005	Matthew Wilcox <willy@debian.org>
+    Copyright (C) 1999-2002	William Ono <wmono@debian.org>
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in "/usr/share/common-licenses/GPL-2".

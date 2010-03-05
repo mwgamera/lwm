@@ -1,0 +1,27 @@
+From 3c818f62e30156f70f70cd521ba5eb536f48bc50 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 5 Mar 2010 11:18:19 +0200
+Subject: [PATCH] lwm.h: Change DEFAULT_TERMINAL
+
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ lwm.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/lwm.h b/lwm.h
+index 6b1e47b..7330450 100644
+--- a/lwm.h
++++ b/lwm.h
+@@ -21,7 +21,7 @@
+ 
+ #define DEFAULT_TITLE_FONT "-*-lucida-bold-r-normal-sans-14-*-*-*-p-*-iso10646-1"
+ #define DEFAULT_POPUP_FONT "-*-lucida-medium-r-normal-sans-12-*-*-*-p-*-iso10646-1"
+-#define DEFAULT_TERMINAL "xterm"
++#define DEFAULT_TERMINAL "x-terminal-emulator"
+ #define DEFAULT_BORDER 6
+ 
+ #define HIDE_BUTTON Button3
+-- 
+1.7.0
+

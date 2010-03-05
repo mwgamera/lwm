@@ -1,0 +1,2 @@
+version=3
+http://www.jfc.org.uk/software/lwm.html .*wm-(\d.+)\.tar\.gz

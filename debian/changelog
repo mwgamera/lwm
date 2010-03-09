@@ -26,12 +26,13 @@ lwm (1.2.1-2) unstable; urgency=low
     - (Number 05): Link with ICE library (FTBFS minor; Closes: #555571).
   * debian/rules
     - Update to dh(1).
+    - (install): Define CC, otherwise the build fails under pbuilder.
   * debian/source/format
     - New file.
   * debian/watch
     - New file.
 
- -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 15:57:28 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 17:16:54 +0200
 
 lwm (1.2.1-1.2) unstable; urgency=low
 

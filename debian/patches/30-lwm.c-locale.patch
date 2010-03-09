@@ -9,11 +9,11 @@ Signed-off-by: Jari Aalto <jari.aalto@cante.net>
  lwm.c |    2 --
  1 files changed, 0 insertions(+), 2 deletions(-)
 
-diff --git a/lwm.c b/lwm.c
-index a0c0f8c..612131a 100644
---- a/lwm.c
-+++ b/lwm.c
-@@ -86,8 +86,6 @@ main(int argc, char *argv[]) {
+Index: lwm.git/lwm.c
+===================================================================
+--- lwm.git.orig/lwm.c	2010-03-09 18:34:13.000000000 +0200
++++ lwm.git/lwm.c	2010-03-09 18:34:20.000000000 +0200
+@@ -87,8 +87,6 @@
  
  	mode = wm_initialising;
  
@@ -22,6 +22,3 @@ index a0c0f8c..612131a 100644
  	/* Open a connection to the X server. */
  	dpy = XOpenDisplay(NULL);
  	if (dpy == 0)
--- 
-1.7.0
-

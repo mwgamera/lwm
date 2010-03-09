@@ -8,6 +8,8 @@ include debian/debian-vars.mk
 
 override_dh_auto_build:
 	xmkmf
+	ls -la Make*
+	make -n
 	$(MAKE)
 
 install: build

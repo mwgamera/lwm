@@ -1,8 +1,10 @@
 lwm (1.2.1-1) unstable; urgency=low
 
   * New upstream release.
+  * debian/copyright
+    - (Upstream Authors): add note about invalid email.
 
- -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 18:34:01 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 19:59:14 +0200
 
 lwm (1.2.1-2) unstable; urgency=low
 

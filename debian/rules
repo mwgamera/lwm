@@ -1,5 +1,11 @@
 #!/usr/bin/make -f
 
+#export DH_VERBOSE=1
+
+PACKAGE = lwm
+
+include debian/debian-vars.mk
+
 override_dh_auto_build:
 	xmkmf
 	$(MAKE)
@@ -10,9 +16,13 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) DESTDIR=debian/`dh_listpackages` install
-	$(MAKE) DESTDIR=debian/`dh_listpackages` install.man
-	mv debian/`dh_listpackages`/usr/share/man/man1/lwm.1x debian/`dh_listpackages`/usr/share/man/man1/lwm.1
+	$(MAKE) DESTDIR=$(PKGDIR) install
+	$(MAKE) DESTDIR=$(PKGDIR) install.man
+	mv --verbose $(MAN1DIR)/lwm.1x $(MAN1DIR)/lwm.1
+
+	#  Install GDM support
+	$(INSTALL_DIR) $(XSESSIONDIR)
+	$(INSTALL_DATA) debian/*.desktop $(XSESSIONDIR)
 
 binary-arch: build install
 	# target: binary-arch -- Build architecture-dependent files.

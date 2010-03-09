@@ -2,6 +2,7 @@ lwm (1.2.1-2) unstable; urgency=low
 
   * New maintainer (Closes: #572506).
      - Move to packaging format "3.0 (quilt)".
+     - ACK NMU (Closes: #537321).
   * debian/control
     - (Build-Depends): update to debhelper 7.1.
     - (Description): use neutral tone (Closes: #439572).
@@ -11,8 +12,13 @@ lwm (1.2.1-2) unstable; urgency=low
     - (Suggests): new field.
   * debian/copyright
     - Update layout.
+  * debian/debian-vars.mk
+    - New file.
+  * debian/lwm.desktop
+    - New file (Closes: #330055).
   * debian/patches
     - Convert inline changes to patches.
+    - (Number 05): Link with ICE library (FTBFS minor; Closes: #555571).
   * debian/rules
     - Update to dh(1).
   * debian/source/format
@@ -20,7 +26,7 @@ lwm (1.2.1-2) unstable; urgency=low
   * debian/watch
     - New file.
 
- -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 10:55:19 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 11:14:29 +0200
 
 lwm (1.2.1-1.2) unstable; urgency=low
 

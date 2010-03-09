@@ -1,3 +1,4 @@
+05-Imakefile.patch
 10-lwm.man.patch
 20-lwm.h-terminal.patch
 30-lwm.c-locale.patch

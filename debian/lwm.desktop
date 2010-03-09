@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Lwm
+Comment=Minimalistic window manager
+Type=Application
+Terminal=False
+Exec=/usr/bin/lwm
+TryExec=lwm
+
+[Window Manager]
+SessionManaged=true

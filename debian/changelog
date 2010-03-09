@@ -4,9 +4,11 @@ lwm (1.2.1-2) unstable; urgency=low
      - Move to packaging format "3.0 (quilt)".
   * debian/control
     - (Build-Depends): update to debhelper 7.1.
-    - (Standards-Version): update to 3.8.4.
+    - (Description): use neutral tone (Closes: #439572).
     - (Depends): add ${misc:Depends}, add xterm etc. before virtual
       x-terminal-emulator.
+    - (Standards-Version): update to 3.8.4.
+    - (Suggests): new field.
   * debian/copyright
     - Update layout.
   * debian/patches
@@ -18,7 +20,7 @@ lwm (1.2.1-2) unstable; urgency=low
   * debian/watch
     - New file.
 
- -- Jari Aalto <jari.aalto@cante.net>  Fri, 05 Mar 2010 11:29:52 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 10:55:19 +0200
 
 lwm (1.2.1-1.2) unstable; urgency=low
 

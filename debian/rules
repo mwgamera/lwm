@@ -7,7 +7,7 @@ PACKAGE = lwm
 include debian/debian-vars.mk
 
 override_dh_auto_build:
-	dash  -x /usr/bin/xmkmf
+	CC=gcc /usr/bin/xmkmf
 	$(MAKE)
 
 install: build

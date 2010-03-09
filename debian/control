@@ -6,7 +6,7 @@ Maintainer: Jari Aalto <jari.aalto@cante.net>
 Standards-Version: 3.8.4
 Vcs-Browser: http://git.debian.org/?p=collab-maint/lwm.git
 Vcs-Git: git://git.debian.org/git/collab-maint/lwm.git
-Homepage: http://www.jfc.org.uk/software/lwm.html
+Homepage: http://freshmeat.net/projects/lwm
 
 Package: lwm
 Architecture: any

@@ -1,10 +1,12 @@
-lwm (1.2.1-1) unstable; urgency=low
+lwm (1.2.2-1) unstable; urgency=low
 
   * New upstream release.
   * debian/copyright
     - (Upstream Authors): add note about invalid email.
+  * debian/rules:
+    - (binary): remove binary-indep.
 
- -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 19:59:14 +0200
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 20 Mar 2010 11:27:27 +0200
 
 lwm (1.2.1-2) unstable; urgency=low
 

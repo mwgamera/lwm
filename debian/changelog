@@ -1,3 +1,21 @@
+lwm (1.2.2-2) unstable; urgency=low
+
+  * debian/compat
+    - Update to 8.
+  * debian/control
+    - (Build-Depends): update to debhelper 8.
+    - (Standards-Version): Update to 3.9.1.
+  * debian/patches
+    - (40): New. Increase target area for close box. Patch thanks
+      to  Joey Hess <joeyh@debian.org>
+  * debian/rules
+    - Simplify rules.
+    - (override_dh_installwm): New.
+    - (override_dh_auto_install): New.
+    - (install): Delete.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 12 Oct 2010 23:51:10 +0300
+
 lwm (1.2.2-1) unstable; urgency=low
 
   * New upstream release.

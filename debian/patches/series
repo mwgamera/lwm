@@ -3,3 +3,4 @@
 20-lwm.h-terminal.patch
 30-lwm.c-locale.patch
 30-lwm.c-locale=31-term.patch
+40-disp.c-increase-target-area-for-close-box.patch

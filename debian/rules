@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-#export DH_VERBOSE=1
-
 PACKAGE = lwm
 
 include debian/debian-vars.mk
@@ -10,12 +8,7 @@ override_dh_auto_build:
 	CC=gcc /usr/bin/xmkmf
 	$(MAKE)
 
-install: build
-	dh_testdir
-	dh_testroot
-	dh_prep
-	dh_installdirs
-
+override_dh_auto_install:
 	$(MAKE) DESTDIR=$(PKGDIR) install
 	$(MAKE) DESTDIR=$(PKGDIR) install.man
 	mv --verbose $(MAN1DIR)/lwm.1x $(MAN1DIR)/lwm.1
@@ -24,33 +17,10 @@ install: build
 	$(INSTALL_DIR) $(XSESSIONDIR)
 	$(INSTALL_DATA) debian/*.desktop $(XSESSIONDIR)
 
-binary-arch: build install
-	# target: binary-arch -- Build architecture-dependent files.
-	dh_testdir
-	dh_testroot
-	dh_installchangelogs
-	dh_installdocs
-	dh_installexamples
-	dh_install
-	dh_installmenu
-	dh_installman lwm.man
+override_dh_installwm:
 	dh_installwm --priority=80 lwm
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-binary: binary-arch
 
 %:
 	dh $@
-
-.PHONY: install
-.PHONY: binary-arch binary
 
 # End of file

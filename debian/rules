@@ -2,6 +2,11 @@
 
 PACKAGE = lwm
 
+include /usr/share/dpkg/buildflags.mk
+CFLAGS	+= -Wall -pedantic
+LDFLAGS += -Wl,--as-needed
+export CFLAGS LDFLAGS
+
 include debian/debian-vars.mk
 
 override_dh_auto_build:

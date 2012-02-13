@@ -1,3 +1,18 @@
+lwm (1.2.2-3) unstable; urgency=low
+
+  * debian/compat
+    - Update to 9
+  * debian/control
+    - (Build-Depends): update to debhelper 9, dpkg-dev 1.16.1.
+    - (Standards-Version): Update to 3.9.2.
+  * debian/patches
+    - (20): Fix code for gcc hardened format specifiers.
+  * debian/rules
+    - Use hardened CFLAGS.
+      http://wiki.debian.org/ReleaseGoals/SecurityHardeningBuildFlags
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 13 Feb 2012 04:59:52 -0500
+
 lwm (1.2.2-2) unstable; urgency=low
 
   * debian/compat

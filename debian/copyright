@@ -1,46 +1,42 @@
-This work was packaged for Debian by:
+Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=174
+X-Format: http://dep.debian.net/deps/dep5
+Upstream-Name: lwm
+Upstream-Contact: James Carter <james@jfc.org.uk>
+Source: http://freshmeat.net /projects/lwm
+X-Source: http://www.jfc.org.uk/software/lwm.html
+X-Upstream-Vcs:
+X-Upstream-Bugs:
+X-Source: http://sourceforge.net/projects/
+X-Comment: dead upstream
 
-    William Ono <wmono@debian.org>
-    on 1999-10-22 17:55:35-07 Fri.
-
-It was downloaded from:
-
-    http://freshmeat.net/projects/lwm
-    http://www.jfc.org.uk/software/lwm.html
-
-Upstream Authors:
-
-    James Carter <james@jfc.org.uk>
-    Elliott Hughes <ehughes@bluearc.com> (2010-03-09 Email not valid)
-
+Files: *
 Copyright:
+ 1997-2003 James Carter <james@jfc.org.uk> (Current maintainer)
+ 1997-2003 Elliott Hughes <ehughes@bluearc.com> (2010-03-09 Email not valid)
+License: GPL-2+
 
-    Copyright (C) 1997-2003 James Carter
-    Copyright (C) 1997-2003 Elliott Hughes
+Files: debian/*
+Copyright:
+ 2010-2012 Jari Aalto <jari.aalto@cante.net>
+ 2009	   Ansgar Burchardt <ansgar@43-1.org>
+ 2008	   Margarita Manterola <marga@debian.org>
+ 2003-2005 Matthew Wilcox <willy@debian.org>
+ 1999-2002 William Ono <wmono@debian.org>
+License: GPL-2+
 
-License:
-
-    This package is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
-
-    This package is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program. If not, see <http://www.gnu.org/licenses/>
-
-The Debian packaging is licensed under the GPL version 2, or (at your
-option), any later version, and is:
-
-    Copyright (C) 2010		Jari Aalto <jari.aalto@cante.net>
-    Copyright (C) 2009		Ansgar Burchardt <ansgar@43-1.org>
-    Copyright (C) 2008		Margarita Manterola <marga@debian.org>
-    Copyright (C) 2003-2005	Matthew Wilcox <willy@debian.org>
-    Copyright (C) 1999-2002	William Ono <wmono@debian.org>
-
-On Debian systems, the complete text of the GNU General
-Public License can be found in "/usr/share/common-licenses/GPL-2".
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in "/usr/share/common-licenses/GPL-2".

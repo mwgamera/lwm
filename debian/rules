@@ -2,16 +2,16 @@
 
 PACKAGE = lwm
 
-include /usr/share/dpkg/buildflags.mk
-CFLAGS	+= -Wall -pedantic
-LDFLAGS += -Wl,--as-needed
+export DEB_BUILD_MAINT_OPTIONS	= hardening=+all
+export DEB_CFLAGS_MAINT_APPEND	= -Wall -pedantic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 include debian/debian-vars.mk
 
 override_dh_auto_build:
 	CC=gcc /usr/bin/xmkmf
-	# The only place where to inject extra flags in INCLUDES
-	$(MAKE) INCLUDES="-I. $(CFLAGS) $(LDFLAGS)"
+	# The only place where to inject extra flags
+	$(MAKE) CC="$(CC) -I. $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)"
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$(PKGDIR) install

@@ -1,22 +1,22 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0
-Upstream-Name: lwm
+Upstream-Name: Lightweight Window Manager
 Upstream-Contact: James Carter <james@jfc.org.uk>
-Source: http://freshmeat.net /projects/lwm
-X-Source: http://www.jfc.org.uk/software/lwm.html
-X-Source: http://sourceforge.net/projects/
+Source: http://freshmeat.net/projects/lwm
+Comment:
+ See also http://www.jfc.org.uk/software/lwm.html
 
 Files: *
 Copyright:
-  1997-2003 James Carter <james@jfc.org.uk> (Current maintainer)
-  1997-2003 Elliott Hughes <ehughes@bluearc.com> (2010-03-09 Email not valid)
+  1997-2003 James Carter <james@jfc.org.uk>
+  1997-2003 Elliott Hughes <ehughes@bluearc.com> (2010-03-09 Email invalid)
 License: GPL-2+
 
 Files: debian/*
 Copyright:
-  2010-2012 Jari Aalto <jari.aalto@cante.net>
-  2009      Ansgar Burchardt <ansgar@43-1.org>
-  2008      Margarita Manterola <marga@debian.org>
-  2003-2005 Matthew Wilcox <willy@debian.org>
+  2010, 2013 Jari Aalto <jari.aalto@cante.net>
+  2009 Ansgar Burchardt <ansgar@43-1.org>
+  2008 Margarita Manterola <marga@debian.org>
+  2003, 2005 Matthew Wilcox <willy@debian.org>
   1999-2002 William Ono <wmono@debian.org>
 License: GPL-2+
 

@@ -1,17 +1,21 @@
 #!/usr/bin/make -f
 
-PACKAGE = lwm
+PACKAGE      = lwm
+PKGDIR       = $(CURDIR)/debian/$(PACKAGE)
+SHAREROOTDIR = $(PKGDIR)/usr/share
+MANROOTDIR   = $(SHAREROOTDIR)/man
+XSESSIONDIR  = $(SHAREROOTDIR)/xsessions
+MAN1DIR      = $(SHAREROOTDIR)/man/man1
 
-export DEB_BUILD_MAINT_OPTIONS	= hardening=+all
-export DEB_CFLAGS_MAINT_APPEND	= -Wall -pedantic
-export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
-
-include debian/debian-vars.mk
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+CFLAGS  += -Wall -D_FILE_OFFSET_BITS=64
+LDFLAGS += -Wl,--as-needed
+cc      := $(CC) $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
 
 override_dh_auto_build:
-	CC=gcc /usr/bin/xmkmf
+	xmkmf
 	# The only place where to inject extra flags
-	$(MAKE) CC="$(CC) -I. $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)"
+	$(MAKE) CC="$(cc)"
 
 override_dh_auto_install:
 	$(MAKE) DESTDIR=$(PKGDIR) install
@@ -19,8 +23,8 @@ override_dh_auto_install:
 	mv --verbose $(MAN1DIR)/lwm.1x $(MAN1DIR)/lwm.1
 
 	#  Install GDM support
-	$(INSTALL_DIR) $(XSESSIONDIR)
-	$(INSTALL_DATA) debian/*.desktop $(XSESSIONDIR)
+	install -m 755 -d $(XSESSIONDIR)
+	install -m 644 debian/*.desktop $(XSESSIONDIR)
 
 override_dh_installwm:
 	dh_installwm --priority=80 lwm

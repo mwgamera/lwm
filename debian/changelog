@@ -1,3 +1,15 @@
+lwm (1.2.4-1~klg1) UNRELEASED; urgency=medium
+
+  * New upstream release.
+  * Drop patches applied upstream:
+    - 05-Imakefile.patch
+    - 10-lwm.man.patch
+    - 30-lwm.c-locale.patch
+  * Fix handling UTF-8 window titles
+  * Fix minor typo in manual
+
+ -- Kacper Gutowski <klg@mmax.one.pl>  Thu, 14 Apr 2016 14:37:18 +0200
+
 lwm (1.2.2-5) unstable; urgency=low
 
   * debian/control

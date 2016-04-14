@@ -1,6 +1,3 @@
-05-Imakefile.patch
-10-lwm.man.patch
-20-lwm.h-terminal.patch
-30-lwm.c-locale.patch
-30-lwm.c-locale=31-term.patch
-40-disp.c-increase-target-area-for-close-box.patch
+0001-lwm.h-Change-DEFAULT_TERMINAL.patch
+0002-lwm.c-Use-Debian-terminal-setting.patch
+0003-disp.c-increase-target-area-for-close-box.patch

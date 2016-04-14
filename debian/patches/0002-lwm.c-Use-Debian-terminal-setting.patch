@@ -1,16 +1,14 @@
-From 77713b317d9d6e00ba8f257f1db95f636fe0e329 Mon Sep 17 00:00:00 2001
 From: Jari Aalto <jari.aalto@cante.net>
 Date: Fri, 5 Mar 2010 11:28:43 +0200
-Subject: [PATCH] lwm.c: Use Debian terminal setting
-
+Subject: lwm.c: Use Debian terminal setting
 
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
- lwm.c |    2 +-
- 1 files changed, 1 insertions(+), 1 deletions(-)
+ lwm.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/lwm.c b/lwm.c
-index 61298b1..9648d1d 100644
+index f67a663..e351aea 100644
 --- a/lwm.c
 +++ b/lwm.c
 @@ -299,7 +299,7 @@ shell(ScreenInfo * screen, int button, int x, int y) {
@@ -22,6 +20,3 @@ index 61298b1..9648d1d 100644
  		exit(EXIT_FAILURE);
  	case -1:	/* Error. */
  		fprintf(stderr, "%s: couldn't fork\n", argv0);
--- 
-1.7.0
-

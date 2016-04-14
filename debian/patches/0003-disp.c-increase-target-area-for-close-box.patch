@@ -1,18 +1,14 @@
-From ba751a6ef2f96cee5933b7b6bc27f0b9e32ff9c1 Mon Sep 17 00:00:00 2001
 From: Jari Aalto <jari.aalto@cante.net>
 Date: Tue, 12 Oct 2010 23:46:33 +0300
-Subject: [PATCH] disp.c: increase target area for close box
-Organization: Private
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: 8bit
+Subject: disp.c: increase target area for close box
 
 Signed-off-by: Jari Aalto <jari.aalto@cante.net>
 ---
- disp.c |   17 +++++++++--------
- 1 files changed, 9 insertions(+), 8 deletions(-)
+ disp.c | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
 
 diff --git a/disp.c b/disp.c
-index 67f2f71..dbf6a71 100644
+index 612c4e2..039cc0e 100644
 --- a/disp.c
 +++ b/disp.c
 @@ -140,6 +140,11 @@ expose(XEvent * ev) {
@@ -49,7 +45,7 @@ index 67f2f71..dbf6a71 100644
  					Client_Close(pending);
  		pending = NULL;
  	} else if (mode == wm_hiding_window) {
-@@ -744,9 +747,7 @@ motionnotify(XEvent *ev) {
+@@ -752,9 +755,7 @@ motionnotify(XEvent *ev) {
  			(e->subwindow != c->window) &&
  			mode == wm_idle) {
  			/* mouse moved in a frame we manage - check cursor */
@@ -60,6 +56,3 @@ index 67f2f71..dbf6a71 100644
  				edge = E_LAST;
  			} else if (e->x <= border && e->y <= border) {
  				edge = ETopLeft;
--- 
-1.7.1
-

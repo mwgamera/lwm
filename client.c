@@ -1,6 +1,6 @@
 /*
  * lwm, a window manager for X11
- * Copyright (C) 1997-2003 Elliott Hughes, James Carter
+ * Copyright (C) 1997-2016 Elliott Hughes, James Carter
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -689,7 +689,7 @@ Client_EnterFullScreen(Client *c) {
 		c->size.width = fs.width =
 			c->screen->display_width + 2 * border;
 		c->size.height = fs.height =
-			c->screen->display_height + titleHeight() + 2 * border;
+			c->screen->display_height + 2 * border;
 		XConfigureWindow(dpy, c->parent,
 			CWX | CWY | CWWidth | CWHeight, &fs);
 

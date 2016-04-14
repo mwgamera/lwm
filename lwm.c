@@ -1,6 +1,6 @@
 /*
  * lwm, a window manager for X11
- * Copyright (C) 1997-2003 Elliott Hughes, James Carter
+ * Copyright (C) 1997-2016 Elliott Hughes, James Carter
  * 
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -86,8 +86,6 @@ main(int argc, char *argv[]) {
 	argv0 = argv[0];
 
 	mode = wm_initialising;
-
-	setlocale(LC_ALL,"");
 
 	/* Open a connection to the X server. */
 	dpy = XOpenDisplay(NULL);
@@ -387,10 +385,11 @@ initScreen(int screen) {
 	int len;
 	char * display_string = DisplayString(dpy);
 	char * colon = strrchr(display_string, ':');
-	char * dot = strrchr(display_string, '.');
-	
+	char * dot = NULL;
+
 	/* Set the DISPLAY specification. */
 	if (colon) {
+	        dot = strrchr(colon, '.');
 		len = 9 + strlen(display_string) + ((dot == 0) ? 2 : 0) + 10;
 		screens[screen].display_spec = (char *) malloc(len);
 		sprintf(screens[screen].display_spec, "DISPLAY=%s", display_string);

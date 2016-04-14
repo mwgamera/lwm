@@ -1,3 +1,5 @@
 0001-lwm.h-Change-DEFAULT_TERMINAL.patch
 0002-lwm.c-Use-Debian-terminal-setting.patch
 0003-disp.c-increase-target-area-for-close-box.patch
+0004-Fix-handling-UTF-8-window-titles.patch
+0005-Minor-typo-in-manual.patch

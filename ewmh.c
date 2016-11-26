@@ -121,7 +121,7 @@ ewmh_init_screens(void) {
   		XChangeProperty(dpy, screens[i].ewmh_compat,
 			ewmh_atom[_NET_WM_NAME],
 			utf8_string, 8, PropModeReplace,
-			"lwm", 3);
+			(unsigned char *)"lwm", 3);
 
 		/* set root window properties */
   		XChangeProperty(dpy, screens[i].root,

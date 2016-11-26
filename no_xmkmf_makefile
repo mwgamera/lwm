@@ -6,7 +6,7 @@
 
 # Uncomment these lines to use gcc.
 #CC = gcc
-#CFLAGS = -ansi -pedantic -Wall -DSHAPE
+#CFLAGS = -ansi -pedantic -Wall -DSHAPE -D_DEFAULT_SOURCE
 
 # Uncomment these lines to use SGI cc.
 #CC = cc

@@ -272,7 +272,7 @@ Client_Remove(Client *c) {
 
 
 void
-Client_MakeSane(Client *c, Edge edge, int *x, int *y, int *dx, int *dy) {
+Client_MakeSane(Client *c, Edge edge, int x, int y, int dx, int dy) {
 	Bool	horizontal_ok = True;
 	Bool	vertical_ok = True;
 
@@ -280,18 +280,18 @@ Client_MakeSane(Client *c, Edge edge, int *x, int *y, int *dx, int *dy) {
 		/*
 		 *	Make sure we're not making the window too small.
 		 */
-		if (*dx < c->size.min_width)
+		if (dx < c->size.min_width)
 			horizontal_ok = False;
-		if (*dy < c->size.min_height)
+		if (dy < c->size.min_height)
 			vertical_ok = False;
 
 		/*
 		 * Make sure we're not making the window too large.
 		 */
 		if (c->size.flags & PMaxSize) {
-			if (*dx > c->size.max_width)
+			if (dx > c->size.max_width)
 				horizontal_ok = False;
-			if (*dy > c->size.max_height)
+			if (dy > c->size.max_height)
 				vertical_ok = False;
 		}
 
@@ -301,38 +301,38 @@ Client_MakeSane(Client *c, Edge edge, int *x, int *y, int *dx, int *dy) {
 		 */
 
 		if (c->size.width_inc > 1) {
-			int apparent_dx = *dx - 2 * border - c->size.base_width;
+			int apparent_dx = dx - 2 * border - c->size.base_width;
 			int x_fix = apparent_dx % c->size.width_inc;
 
 			switch (edge) {
 			case ELeft:
 			case ETopLeft:
 			case EBottomLeft:
-				*x += x_fix;
+				x += x_fix;
 				/*FALLTHROUGH*/
 			case ERight:
 			case ETopRight:
 			case EBottomRight:
-				*dx -= x_fix;
+				dx -= x_fix;
 				break;
 			default: break;
 			}
 		}
 
 		if (c->size.height_inc > 1) {
-			int apparent_dy = *dy - 2 * border - c->size.base_height;
+			int apparent_dy = dy - 2 * border - c->size.base_height;
 			int y_fix = apparent_dy % c->size.height_inc;
 
 			switch (edge) {
 			case ETop:
 			case ETopLeft:
 			case ETopRight:
-				*y += y_fix;
+				y += y_fix;
 				/*FALLTHROUGH*/
 			case EBottom:
 			case EBottomLeft:
 			case EBottomRight:
-				*dy -= y_fix;
+				dy -= y_fix;
 				break;
 			default: break;
 			}
@@ -357,25 +357,25 @@ Client_MakeSane(Client *c, Edge edge, int *x, int *y, int *dx, int *dy) {
 	 */
 	if (c->strut.left == 0 && c->strut.right == 0 &&
 		c->strut.top == 0 && c->strut.bottom == 0) {
-		if ((int)(*y + border) >=
+		if ((int)(y + border) >=
 			(int)(c->screen->display_height -
 			c->screen->strut.bottom)) {
-			*y = c->screen->display_height -
+			y = c->screen->display_height -
 				c->screen->strut.bottom -border;
 		}
-		if ((int)(*y + c->size.height - border) <=
+		if ((int)(y + dy - border) <=
 			(int)c->screen->strut.top) {
-			*y = c->screen->strut.top + border - c->size.height;
+			y = c->screen->strut.top + border - dy;
 		}
-		if ((int)(*x + border) >=
+		if ((int)(x + border) >=
 			(int)(c->screen->display_width -
 			c->screen->strut.right)) {
-			*x = c->screen->display_width -
+			x = c->screen->display_width -
 				c->screen->strut.right -border;
 		}
-		if ((int)(*x + c->size.width - border) <=
+		if ((int)(x + dx - border) <=
 			(int)c->screen->strut.left) {
-			*x = c->screen->strut.left + border - c->size.width;
+			x = c->screen->strut.left + border - dx;
 		}
 	}
 
@@ -384,47 +384,42 @@ Client_MakeSane(Client *c, Edge edge, int *x, int *y, int *dx, int *dy) {
 	 * be "thrown" to the edge of the workarea without precise mousing,
 	 * as requested by MAD.
 	 */
-	if (*x < (int)c->screen->strut.left &&
-		*x > ((int)c->screen->strut.left - EDGE_RESIST)) {
-		*x =  (int)c->screen->strut.left;
+	if (x < (int)c->screen->strut.left &&
+		x > ((int)c->screen->strut.left - EDGE_RESIST)) {
+		x =  (int)c->screen->strut.left;
 	}
-	if ((*x + c->size.width) >
-		(int)(c->screen->display_width - c->screen->strut.right) &&
-		(*x + c->size.width) <
-		(int)(c->screen->display_width - c->screen->strut.right +			EDGE_RESIST)) {
-		*x = (int)(c->screen->display_width - c->screen->strut.right -
-			c->size.width);
+	if ((x + dx) > (int)(c->screen->display_width - c->screen->strut.right) &&
+		(x + dx) < (int)(c->screen->display_width - c->screen->strut.right + EDGE_RESIST)) {
+		x = (int)(c->screen->display_width - c->screen->strut.right - dx);
 	}
-	if ((*y - titleHeight()) < (int)c->screen->strut.top &&
-		(*y - titleHeight()) >
-		((int)c->screen->strut.top - EDGE_RESIST)) {
-		*y =  (int)c->screen->strut.top + titleHeight();
+	if ((y - titleHeight()) < (int)c->screen->strut.top &&
+		(y - titleHeight()) > ((int)c->screen->strut.top - EDGE_RESIST)) {
+		y =  (int)c->screen->strut.top + titleHeight();
 	}
-	if ((*y + c->size.height) >
+	if ((y + dy) >
 		(int)(c->screen->display_height - c->screen->strut.bottom) &&
-		(*y + c->size.height) <
-		(int)(c->screen->display_height - c->screen->strut.bottom +			EDGE_RESIST)) {
-		*y = (int)(c->screen->display_height - c->screen->strut.bottom -
-			c->size.height);
+		(y + dy) <
+		(int)(c->screen->display_height - c->screen->strut.bottom + EDGE_RESIST)) {
+		y = (int)(c->screen->display_height - c->screen->strut.bottom - dy);
 	}
 
 	/*
 	 * Update that part of the client information that we're happy with.
 	 */
-	if (interacting_edge != ENone) {
+	if (edge != ENone) {
 		if (horizontal_ok) {
-			c->size.x = *x;
-			c->size.width  = *dx;
+			c->size.x = x;
+			c->size.width  = dx;
 		}
 		if (vertical_ok) {
-			c->size.y = *y;
-			c->size.height = *dy;
+			c->size.y = y;
+			c->size.height = dy;
 		}
 	} else {
 		if (horizontal_ok)
-			c->size.x = *x;
+			c->size.x = x;
 		if (vertical_ok)
-			c->size.y = *y;
+			c->size.y = y;
 	}
 }
 

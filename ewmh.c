@@ -427,8 +427,6 @@ ewmh_set_strut(ScreenInfo *screen) {
 	Client *c;
 	EWMHStrut strut;
 	unsigned long data[4];
-	/* FIXME: add parameter to MakeSane rather than this hack */
-	Edge backup;
 
 	/* find largest reserved areas */
 	strut.left = 0;
@@ -472,10 +470,7 @@ ewmh_set_strut(ScreenInfo *screen) {
 		int y = c->size.y;
 
 		if (c->wstate.fullscreen == True) continue;
-		backup = interacting_edge;
-		interacting_edge = ENone;
-		Client_MakeSane(c, ENone, &x, &y, 0, 0);
-		interacting_edge = backup;
+		Client_MakeSane(c, ENone, x, y, c->size.width, c->size.height);
 		if (c->framed == True) {
 			XMoveWindow(dpy, c->parent,
 				c->size.x,

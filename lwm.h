@@ -255,7 +255,7 @@ extern Client *client_head(void);
 extern Edge interacting_edge;
 extern Client *Client_Get(Window);
 extern Client *Client_Add(Window, Window);
-extern void Client_MakeSane(Client *, Edge, int *, int *, int *, int *);
+extern void Client_MakeSane(Client *, Edge, int, int, int, int);
 extern void Client_DrawBorder(Client *, int);
 extern void setactive(Client *, int, long);
 extern void Client_SizeFeedback(void);

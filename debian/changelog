@@ -1,3 +1,9 @@
+lwm (1.2.4-1~klg2) UNRELEASED; urgency=medium
+
+  * Fix window resizing near bottom and right edges
+
+ -- Kacper Gutowski <klg@mmax.one.pl>  Mon, 28 Nov 2016 04:42:28 +0100
+
 lwm (1.2.4-1~klg1) UNRELEASED; urgency=medium
 
   * New upstream release.

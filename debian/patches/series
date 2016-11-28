@@ -3,3 +3,4 @@
 0003-disp.c-increase-target-area-for-close-box.patch
 0004-Fix-handling-UTF-8-window-titles.patch
 0005-Minor-typo-in-manual.patch
+0006-Fix-window-resizing-near-bottom-and-right-edges.patch
